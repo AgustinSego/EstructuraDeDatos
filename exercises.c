@@ -79,7 +79,7 @@ void eliminaElementos(List*L, int elem){
    
    while(aux != NULL)
       {
-         if((int *)aux == (int *)elem)
+         if(*(int *)aux == elem)
          {
             popCurrent(L);
          }

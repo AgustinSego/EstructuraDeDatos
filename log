@@ -73,3 +73,13 @@ exercises.c:82:27: error: cast to pointer from integer of different size [-Werro
       |                           ^
 cc1: all warnings being treated as errors
 ed028ed
+Thu Mar 19 07:36:21 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:61:15: error: assignment to ‘int’ from ‘int *’ makes integer from pointer without a cast [-Wint-conversion]
+   61 |          suma += (int *)aux;
+      |               ^~
+ae9ead1
