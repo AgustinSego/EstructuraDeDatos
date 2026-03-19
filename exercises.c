@@ -58,7 +58,7 @@ int sumaLista(List *L) {
    void *aux = first(L);
    while(aux != NULL)
       {
-         suma += (int)(((int *)aux));
+         suma += (int *)aux;
          aux = next(L);
       }
    
@@ -79,7 +79,7 @@ void eliminaElementos(List*L, int elem){
    
    while(aux != NULL)
       {
-         if((int *)aux == elem)
+         if((int )aux == elem)
          {
             popCurrent(L);
          }
