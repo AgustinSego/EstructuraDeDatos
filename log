@@ -1,0 +1,15 @@
+Thu Mar 19 07:28:57 PM UTC 2026: 
+ exercises.c | 19 ++++++++++++++++++-
+ 1 file changed, 18 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:61:15: error: assignment to ‘int’ from ‘int *’ makes integer from pointer without a cast [-Wint-conversion]
+   61 |          suma = (int *)aux;
+      |               ^
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:82:24: error: comparison between pointer and integer [-Werror]
+   82 |          if((int *)aux == elem)
+      |                        ^~
+cc1: all warnings being treated as errors
+2d909d0
