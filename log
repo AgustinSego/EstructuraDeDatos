@@ -28,3 +28,18 @@ exercises.c:82:24: error: comparison between pointer and integer [-Werror]
       |                        ^~
 cc1: all warnings being treated as errors
 aa9bad8
+Thu Mar 19 07:30:50 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:61:18: error: cast from pointer to integer of different size [-Werror=pointer-to-int-cast]
+   61 |          suma += (int)(((int *)aux));
+      |                  ^
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:82:24: error: comparison between pointer and integer [-Werror]
+   82 |          if((int *)aux == elem)
+      |                        ^~
+cc1: all warnings being treated as errors
+fe7ea87
