@@ -58,7 +58,7 @@ int sumaLista(List *L) {
    void *aux = first(L);
    while(aux != NULL)
       {
-         suma += (int *)aux;
+         suma += *(int *)aux;
          aux = next(L);
       }
    
