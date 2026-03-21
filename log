@@ -315,3 +315,23 @@ exercises.c:177:24: error: invalid type argument of unary ‘*’ (have ‘int�
   177 |            if(*aux3 != *aux4) return 0;
       |                        ^~~~~
 1ea52f8
+Sat Mar 21 10:29:50 PM UTC 2026: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:177:15: error: dereferencing ‘void *’ pointer [-Werror]
+  177 |            if(*aux3 != *aux4) return 0;
+      |               ^~~~~
+exercises.c:177:24: error: dereferencing ‘void *’ pointer [-Werror]
+  177 |            if(*aux3 != *aux4) return 0;
+      |                        ^~~~~
+exercises.c:177:15: error: void value not ignored as it ought to be
+  177 |            if(*aux3 != *aux4) return 0;
+      |               ^~~~~
+exercises.c:177:24: error: void value not ignored as it ought to be
+  177 |            if(*aux3 != *aux4) return 0;
+      |                        ^~~~~
+cc1: all warnings being treated as errors
+80325a5

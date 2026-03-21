@@ -172,8 +172,8 @@ int parentesisBalanceados(char *cadena) {
    {
      while(first(listaAb) != NULL && first(listaCe) != NULL)
         {
-           int aux3 = first(listaAb);
-           int aux4 = first(listaCe);
+           void *aux3 = first(listaAb);
+           void *aux4 = first(listaCe);
            if(*aux3 != *aux4) return 0;
            next(listaAb);
            next(listaCe);
