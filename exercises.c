@@ -124,7 +124,7 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 0 en caso contrario.
 */
 
-int parentesisBalanceados(char *cadena) {
+int parentesisBalanceados(char *cadena) {}
    /*List *listaAb = create_list();
    List *listaCe = create_list();
    int *aux1 = 0;
@@ -181,5 +181,5 @@ int parentesisBalanceados(char *cadena) {
       return 1;
    }
    */
-}
+
 
