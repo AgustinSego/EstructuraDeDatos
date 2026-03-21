@@ -170,3 +170,22 @@ exercises.c:174:52: note: ...this statement, but the latter is misleadingly inde
       |                                                    ^~~~~~
 cc1: all warnings being treated as errors
 22fb76e
+Sat Mar 21 10:09:28 PM UTC 2026: 
+ exercises.c | 21 +++++++++++++--------
+ 1 file changed, 13 insertions(+), 8 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:137:31: error: ‘aux’ undeclared (first use in this function); did you mean ‘aux2’?
+  137 |             pushBack(listaAb, aux);
+      |                               ^~~
+      |                               aux2
+exercises.c:137:31: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:177:12: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+  177 |            if(*aux1 != *aux2); return 0;
+      |            ^~
+exercises.c:177:32: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  177 |            if(*aux1 != *aux2); return 0;
+      |                                ^~~~~~
+cc1: all warnings being treated as errors
+89ec9d8
