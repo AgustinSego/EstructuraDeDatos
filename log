@@ -433,3 +433,39 @@ exercises.c:149:13: error: invalid operands to binary * (have ‘void *’ and �
   149 |             *aux1 = 3;
       |             ^
 4befcda
+Sat Mar 21 11:47:21 PM UTC 2026: 
+ exercises.c | 66 ++++++++++++-------------------------------------------------
+ 1 file changed, 13 insertions(+), 53 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:128:4: error: variable ‘pila’ has initializer but incomplete type
+  128 |    Stack pila = create_Stack();
+      |    ^~~~~
+exercises.c:128:17: error: implicit declaration of function ‘create_Stack’; did you mean ‘create_stack’? [-Wimplicit-function-declaration]
+  128 |    Stack pila = create_Stack();
+      |                 ^~~~~~~~~~~~
+      |                 create_stack
+exercises.c:128:10: error: storage size of ‘pila’ isn’t known
+  128 |    Stack pila = create_Stack();
+      |          ^~~~
+exercises.c:134:13: error: dereferencing ‘void *’ pointer [-Werror]
+  134 |             *aux = cadena[i];
+      |             ^~~~
+exercises.c:134:18: error: invalid use of void expression
+  134 |             *aux = cadena[i];
+      |                  ^
+exercises.c:142:41: error: comparison between pointer and integer [-Werror]
+  142 |             if(cadena[i] == ')' && aux2 != '(') return 0;
+      |                                         ^~
+exercises.c:143:46: error: comparison between pointer and integer [-Werror]
+  143 |             else if(cadena[i] == ']' && aux2 != '[') return 0;
+      |                                              ^~
+exercises.c:144:46: error: comparison between pointer and integer [-Werror]
+  144 |             else if(cadena[i] == '}' && aux2 != '{') return 0;
+      |                                              ^~
+exercises.c:128:10: error: unused variable ‘pila’ [-Werror=unused-variable]
+  128 |    Stack pila = create_Stack();
+      |          ^~~~
+cc1: all warnings being treated as errors
+26eed64

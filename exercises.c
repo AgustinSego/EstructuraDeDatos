@@ -125,68 +125,28 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 */
 
 int parentesisBalanceados(char *cadena) {
-   List *listaAb = create_list();
-   List *listaCe = create_list();
-   //int *aux1 = malloc(sizeof(int));
-   //int *aux2 = malloc(sizeof(int));
+   Stack pila = create_Stack();
    for(int i = 0; cadena[i] != '\0'; i++)
       {
-         if(cadena[i] == '(')
+         if(cadena[i] == '(' || cadena[i] == '[' || cadena[i] == '{')
          {
-            int *aux1 = malloc(sizeof(int));
-            *aux1 = 1;
-            pushBack(listaAb, aux1);
+            void *aux;
+            *aux = cadena[i];
+            push(pila,aux);
          }
-         else if(cadena[i] == '{')
+         else if(cadena[i] == ')' || cadena[i] == ']' || cadena[i] == '}')
          {
-            int *aux1 = malloc(sizeof(int));
-            *aux1 = 2; 
-            pushBack(listaAb, aux1);
-         }
-         else if(cadena[i] == '[')
-         {
-            int *aux1 = malloc(sizeof(int))
-            *aux1 = 3;
-            pushBack(listaAb, aux1);
-         }
-         else if(cadena[i] == ')')
-         {
-            int *aux2 = malloc(sizeof(int));
-            *aux2 = 1;
-            pushFront(listaCe, aux2);
+            if(top(pila) == NULL) return 0;
+            void *aux2;
+            aux2 = top(pila);
+            if(cadena[i] == ')' && aux2 != '(') return 0;
+            else if(cadena[i] == ']' && aux2 != '[') return 0;
+            else if(cadena[i] == '}' && aux2 != '{') return 0;
+
             
          }
-         else if(cadena[i] == '}')
-         {
-            int *aux2 = malloc(sizeof(int));
-            *aux2 = 2;
-            pushFront(listaCe, aux2);
-         }
-         else if (cadena[i] == ']')
-         {
-            int *aux2 = malloc(sizeof(int));
-            *aux2 = 3;
-            pushFront(listaCe, aux2);
-         }
       }
-
-   int cont1 = get_size(listaAb);
-   int cont2 = get_size(listaCe);
-   
-   if(cont1 != cont2) return 0;
-   else
-   {
-     while(first(listaAb) != NULL && first(listaCe) != NULL)
-        {
-           void *aux3 = first(listaAb);
-           void *aux4 = first(listaCe);
-           if(*(int *)aux3 != *(int *)aux4) return 0;
-           next(listaAb);
-           next(listaCe);
-        }
-      return 1;
-   }
-
+   return 1;
 }
 
 
