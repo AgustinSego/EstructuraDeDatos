@@ -296,3 +296,22 @@ Sat Mar 21 10:22:08 PM UTC 2026:
  1 file changed, 3 insertions(+), 3 deletions(-)
  tests:  0|0
 304991d
+Sat Mar 21 10:28:31 PM UTC 2026: 
+ exercises.c | 34 +++++++++++++++++-----------------
+ 1 file changed, 17 insertions(+), 17 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:175:23: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+  175 |            int aux3 = first(listaAb);
+      |                       ^~~~~
+exercises.c:176:23: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+  176 |            int aux4 = first(listaCe);
+      |                       ^~~~~
+exercises.c:177:15: error: invalid type argument of unary ‘*’ (have ‘int’)
+  177 |            if(*aux3 != *aux4) return 0;
+      |               ^~~~~
+exercises.c:177:24: error: invalid type argument of unary ‘*’ (have ‘int’)
+  177 |            if(*aux3 != *aux4) return 0;
+      |                        ^~~~~
+1ea52f8
