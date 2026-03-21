@@ -514,3 +514,13 @@ exercises.c:133:19: note: ‘aux’ was declared here
       |                   ^~~
 cc1: all warnings being treated as errors
 e25b3c9
+Sat Mar 21 11:52:44 PM UTC 2026: 
+ exercises.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:133:24: error: initialization of ‘char *’ from ‘char’ makes pointer from integer without a cast [-Wint-conversion]
+  133 |             char *aux =cadena[i];
+      |                        ^~~~~~
+81c9b20
