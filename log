@@ -335,3 +335,47 @@ exercises.c:177:24: error: void value not ignored as it ought to be
       |                        ^~~~~
 cc1: all warnings being treated as errors
 80325a5
+Sat Mar 21 10:54:51 PM UTC 2026: 
+ exercises.c | 30 +++++++++++++++---------------
+ 1 file changed, 15 insertions(+), 15 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:136:13: error: dereferencing ‘void *’ pointer [-Werror]
+  136 |             *aux1 = 1;
+      |             ^~~~~
+exercises.c:136:19: error: invalid use of void expression
+  136 |             *aux1 = 1;
+      |                   ^
+exercises.c:141:13: error: dereferencing ‘void *’ pointer [-Werror]
+  141 |             *aux1 = 2;
+      |             ^~~~~
+exercises.c:141:19: error: invalid use of void expression
+  141 |             *aux1 = 2;
+      |                   ^
+exercises.c:146:13: error: dereferencing ‘void *’ pointer [-Werror]
+  146 |             *aux1 = 3;
+      |             ^~~~~
+exercises.c:146:19: error: invalid use of void expression
+  146 |             *aux1 = 3;
+      |                   ^
+exercises.c:151:13: error: dereferencing ‘void *’ pointer [-Werror]
+  151 |             *aux2 = 1;
+      |             ^~~~~
+exercises.c:151:19: error: invalid use of void expression
+  151 |             *aux2 = 1;
+      |                   ^
+exercises.c:157:13: error: dereferencing ‘void *’ pointer [-Werror]
+  157 |             *aux2 = 2;
+      |             ^~~~~
+exercises.c:157:19: error: invalid use of void expression
+  157 |             *aux2 = 2;
+      |                   ^
+exercises.c:162:13: error: dereferencing ‘void *’ pointer [-Werror]
+  162 |             *aux2 = 3;
+      |             ^~~~~
+exercises.c:162:19: error: invalid use of void expression
+  162 |             *aux2 = 3;
+      |                   ^
+cc1: all warnings being treated as errors
+b84d97a

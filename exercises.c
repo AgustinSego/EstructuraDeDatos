@@ -127,40 +127,40 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 int parentesisBalanceados(char *cadena) {
    List *listaAb = create_list();
    List *listaCe = create_list();
-   int aux1;
-   int aux2;
+   void *aux1;
+   void *aux2;
    for(int i = 0; cadena[i] != '\0'; i++)
       {
          if(cadena[i] == '(')
          {
-            aux1 = 1;
-            pushBack(listaAb, &aux1);
+            *aux1 = 1;
+            pushBack(listaAb, aux1);
          }
          else if(cadena[i] == '{')
          {
-            aux1 = 2; 
-            pushBack(listaAb, &aux1);
+            *aux1 = 2; 
+            pushBack(listaAb, aux1);
          }
          else if(cadena[i] == '[')
          {
-            aux1 = 3;
-            pushBack(listaAb, &aux1);
+            *aux1 = 3;
+            pushBack(listaAb, aux1);
          }
          if(cadena[i] == ')')
          {
-            aux2 = 1;
-            pushFront(listaCe, &aux2);
+            *aux2 = 1;
+            pushFront(listaCe, aux2);
             
          }
          else if(cadena[i] == '}')
          {
-            aux2 = 2;
-            pushFront(listaCe, &aux2);
+            *aux2 = 2;
+            pushFront(listaCe, aux2);
          }
          else if (cadena[i] == ']')
          {
-            aux2 = 3;
-            pushFront(listaCe, &aux2);
+            *aux2 = 3;
+            pushFront(listaCe, aux2);
          }
       }
 
@@ -174,7 +174,7 @@ int parentesisBalanceados(char *cadena) {
         {
            void *aux3 = first(listaAb);
            void *aux4 = first(listaCe);
-           if(*aux3 != *aux4) return 0;
+           if(*(int *)aux3 != *(int *)aux4) return 0;
            next(listaAb);
            next(listaCe);
         }
