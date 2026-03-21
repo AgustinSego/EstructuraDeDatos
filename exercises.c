@@ -127,8 +127,8 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 int parentesisBalanceados(char *cadena) {
    List *listaAb = create_list();
    List *listaCe = create_list();
-   void *aux1;
-   void *aux2;
+   int *aux1;
+   int *aux2;
    for(int i = 0; cadena[i] != '\0'; i++)
       {
          if(cadena[i] == '(')
