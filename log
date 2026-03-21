@@ -500,3 +500,17 @@ exercises.c:128:18: error: implicit declaration of function ‘create_Stack’; 
       |                  create_stack
 exercises.c:128:18: error: initialization of ‘Stack *’ {aka ‘List *’} from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
 7be6c2b
+Sat Mar 21 11:49:27 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:134:18: error: ‘aux’ may be used uninitialized [-Werror=maybe-uninitialized]
+  134 |             *aux = cadena[i];
+      |             ~~~~~^~~~~~~~~~~
+exercises.c:133:19: note: ‘aux’ was declared here
+  133 |             char *aux;
+      |                   ^~~
+cc1: all warnings being treated as errors
+e25b3c9
