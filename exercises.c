@@ -174,7 +174,7 @@ int parentesisBalanceados(char *cadena) {
         {
            aux1 = first(listaAb);
            aux2 = first(listaCe);
-           if(*aux1 != *aux2); return 0;
+           if(*aux1 != *aux2) return 0;
            next(listaAb);
            next(listaCe);
         }
