@@ -545,3 +545,9 @@ exercises.c:134:17: error: assignment to ‘char *’ from ‘char’ makes poin
   134 |             aux = cadena[i];
       |                 ^
 3229984
+Sat Mar 21 11:54:42 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  5|1
+total_score: 50/70
+3e2af31
