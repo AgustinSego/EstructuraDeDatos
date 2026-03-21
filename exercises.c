@@ -170,7 +170,7 @@ int parentesisBalanceados(char *cadena) {
    if(cont1 != cont2) return 0;
    else
    {
-     while(first(listaAb) != NULL)
+     while(first(listaAb) != NULL && first(listaCe) != NULL)
         {
            aux1 = first(listaAb);
            aux2 = first(listaCe);
@@ -180,6 +180,5 @@ int parentesisBalanceados(char *cadena) {
         }
       return 1;
    }
-   //return 0;
 }
 
