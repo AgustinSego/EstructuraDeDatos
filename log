@@ -469,3 +469,22 @@ exercises.c:128:10: error: unused variable ‘pila’ [-Werror=unused-variable]
       |          ^~~~
 cc1: all warnings being treated as errors
 26eed64
+Sat Mar 21 11:48:35 PM UTC 2026: 
+ exercises.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:128:18: error: implicit declaration of function ‘create_Stack’; did you mean ‘create_stack’? [-Wimplicit-function-declaration]
+  128 |    Stack *pila = create_Stack();
+      |                  ^~~~~~~~~~~~
+      |                  create_stack
+exercises.c:128:18: error: initialization of ‘Stack *’ {aka ‘List *’} from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+exercises.c:134:13: error: dereferencing ‘void *’ pointer [-Werror]
+  134 |             *aux = cadena[i];
+      |             ^~~~
+exercises.c:134:18: error: invalid use of void expression
+  134 |             *aux = cadena[i];
+      |                  ^
+cc1: all warnings being treated as errors
+116a76c
