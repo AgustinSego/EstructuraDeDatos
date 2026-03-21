@@ -235,3 +235,21 @@ exercises.c:131:9: note: ‘aux2’ was declared here
       |         ^~~~
 cc1: all warnings being treated as errors
 926ae6f
+Sat Mar 21 10:12:53 PM UTC 2026: 
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:136:19: error: ‘aux1’ may be used uninitialized [-Werror=maybe-uninitialized]
+  136 |             *aux1 = 1;
+      |             ~~~~~~^~~
+exercises.c:130:9: note: ‘aux1’ was declared here
+  130 |    int *aux1;
+      |         ^~~~
+exercises.c:151:19: error: ‘aux2’ may be used uninitialized [-Werror=maybe-uninitialized]
+  151 |             *aux2 = 1;
+      |             ~~~~~~^~~
+exercises.c:131:9: note: ‘aux2’ was declared here
+  131 |    int *aux2;
+      |         ^~~~
+cc1: all warnings being treated as errors
+991519b
