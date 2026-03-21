@@ -144,3 +144,29 @@ Sat Mar 21 07:34:06 PM UTC 2026:
  tests:  4|1
 total_score: 50/70
 4f3f042
+Sat Mar 21 10:06:42 PM UTC 2026: 
+ exercises.c | 52 +++++++++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 51 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:174:15: error: dereferencing ‘void *’ pointer [-Werror]
+  174 |            if(*first(listaAb) != *first(listaCe)); return 0;
+      |               ^~~~~~~~~~~~~~~
+exercises.c:174:34: error: dereferencing ‘void *’ pointer [-Werror]
+  174 |            if(*first(listaAb) != *first(listaCe)); return 0;
+      |                                  ^~~~~~~~~~~~~~~
+exercises.c:174:15: error: void value not ignored as it ought to be
+  174 |            if(*first(listaAb) != *first(listaCe)); return 0;
+      |               ^~~~~~~~~~~~~~~
+exercises.c:174:34: error: void value not ignored as it ought to be
+  174 |            if(*first(listaAb) != *first(listaCe)); return 0;
+      |                                  ^~~~~~~~~~~~~~~
+exercises.c:174:12: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+  174 |            if(*first(listaAb) != *first(listaCe)); return 0;
+      |            ^~
+exercises.c:174:52: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  174 |            if(*first(listaAb) != *first(listaCe)); return 0;
+      |                                                    ^~~~~~
+cc1: all warnings being treated as errors
+22fb76e

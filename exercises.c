@@ -125,6 +125,56 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 */
 
 int parentesisBalanceados(char *cadena) {
-   return 0;
+   List *listaAb = create_list();
+   List *listaCe = create_list();
+   int *aux;
+   for(int i = 0; cadena[i] != '\0'; i++)
+      {
+         if(cadena[i] == '(')
+         {
+            *aux = 1;
+            pushBack(listaAb, aux);
+         }
+         else if(cadena[i] == '{')
+         {
+            *aux = 2; 
+            pushBack(listaAb, aux);
+         }
+         else if(cadena[i] == '[')
+         {
+            *aux = 3;
+            pushBack(listaAb, aux);
+         }
+         if(cadena[i] == ')')
+         {
+            *aux = 1;
+            pushFront(listaCe, aux);
+            
+         }
+         else if(cadena[i] == '}')
+         {
+            *aux = 2;
+            pushFront(listaCe, aux);
+         }
+         else if (cadena[i] == ']')
+         {
+            *aux = 3;
+            pushFront(listaCe, aux);
+         }
+      }
+
+   int cont1 = get_size(listaAb);
+   int cont2 = get_size(listaCe);
+   
+   if(cont1 != cont2) return 0;
+   else
+   {
+     while(first(listaAb) != NULL)
+        {
+           if(*first(listaAb) != *first(listaCe)); return 0;
+        }
+      return 1;
+   }
+   //return 0;
 }
 
