@@ -134,33 +134,33 @@ int parentesisBalanceados(char *cadena) {
          if(cadena[i] == '(')
          {
             *aux1 = 1;
-            pushBack(listaAb, aux);
+            pushBack(listaAb, aux1);
          }
          else if(cadena[i] == '{')
          {
             *aux1 = 2; 
-            pushBack(listaAb, aux);
+            pushBack(listaAb, aux1);
          }
          else if(cadena[i] == '[')
          {
             *aux1 = 3;
-            pushBack(listaAb, aux);
+            pushBack(listaAb, aux1);
          }
          if(cadena[i] == ')')
          {
             *aux2 = 1;
-            pushFront(listaCe, aux);
+            pushFront(listaCe, aux2);
             
          }
          else if(cadena[i] == '}')
          {
             *aux2 = 2;
-            pushFront(listaCe, aux);
+            pushFront(listaCe, aux2);
          }
          else if (cadena[i] == ']')
          {
             *aux2 = 3;
-            pushFront(listaCe, aux);
+            pushFront(listaCe, aux2);
          }
       }
 
