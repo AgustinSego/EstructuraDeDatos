@@ -419,3 +419,17 @@ exercises.c:131:9: note: ‘aux2’ was declared here
       |         ^~~~
 cc1: all warnings being treated as errors
 1424187
+Sat Mar 21 11:29:07 PM UTC 2026: 
+ exercises.c | 12 +++++++++---
+ 1 file changed, 9 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:149:13: error: invalid operands to binary * (have ‘void *’ and ‘int *’)
+  148 |             int *aux1 = malloc(sizeof(int))
+      |                         ~~~~~~~~~~~~~~~~~~~
+      |                         |
+      |                         void *
+  149 |             *aux1 = 3;
+      |             ^
+4befcda

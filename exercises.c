@@ -127,38 +127,44 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 int parentesisBalanceados(char *cadena) {
    List *listaAb = create_list();
    List *listaCe = create_list();
-   int *aux1;
-   int *aux2;
+   //int *aux1 = malloc(sizeof(int));
+   //int *aux2 = malloc(sizeof(int));
    for(int i = 0; cadena[i] != '\0'; i++)
       {
          if(cadena[i] == '(')
          {
+            int *aux1 = malloc(sizeof(int));
             *aux1 = 1;
             pushBack(listaAb, aux1);
          }
          else if(cadena[i] == '{')
          {
+            int *aux1 = malloc(sizeof(int));
             *aux1 = 2; 
             pushBack(listaAb, aux1);
          }
          else if(cadena[i] == '[')
          {
+            int *aux1 = malloc(sizeof(int))
             *aux1 = 3;
             pushBack(listaAb, aux1);
          }
-         if(cadena[i] == ')')
+         else if(cadena[i] == ')')
          {
+            int *aux2 = malloc(sizeof(int));
             *aux2 = 1;
             pushFront(listaCe, aux2);
             
          }
          else if(cadena[i] == '}')
          {
+            int *aux2 = malloc(sizeof(int));
             *aux2 = 2;
             pushFront(listaCe, aux2);
          }
          else if (cadena[i] == ']')
          {
+            int *aux2 = malloc(sizeof(int));
             *aux2 = 3;
             pushFront(listaCe, aux2);
          }
