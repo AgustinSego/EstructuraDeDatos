@@ -45,7 +45,7 @@ List* crea_lista() {
    List* L = create_list();
    for(size_t i = 1; i <= 10; i++)
       {
-         int * n = malloc(sizeof(int) * 10);
+         int * n = malloc(sizeof(int) * i);
          *n = i;
          pushBack(L, n);
       }
@@ -145,7 +145,7 @@ int parentesisBalanceados(char *cadena) {
             else if(cadena[i] == ']' && *(char *)aux2 != '[') return 0;
             else if(cadena[i] == '}' && *(char *)aux2 != '{') return 0;
             
-            pop(pila);
+            //pop(pila);
          }
       }
    if(top(pila) != NULL) return 0;
